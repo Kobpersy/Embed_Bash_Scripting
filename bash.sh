@@ -5,11 +5,11 @@ random=$((1+RANDOM % 10))
 green="\033[32;40m"
 numbOfGuesses=1
 
-echo $green"Welcome, try to guess the random number"
+echo $green"Welcome, try to guess a random number out of 10"
 
 while [ $numbOfGuesses -le 3 ]; do
     echo $green'Current number of guesses ='$numbOfGuesses
-    read -p "Your guess? [n]: " yourGuess
+    read -p "Your guess: " yourGuess
 
     if [ $yourGuess -eq $random ]; then
         echo $green"Your answer is correct! The random number was:" $random
