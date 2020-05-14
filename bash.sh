@@ -10,10 +10,6 @@ echo $green"Welcome, try to guess the random number"
 while [ $numbOfGuesses -le 3 ]; do
     echo $green'Current number of guesses ='$numbOfGuesses
     read -p "Your guess? [n]: " yourGuess
-    
-    while [[ ! $yourGuess -ne [^[1-9]$|^10$]  ]]; do
-        read -p "Invalid input. Your guess? [n]: " yourGuess
-    done
 
     if [ $yourGuess -eq $random ]; then
         echo $green"Your answer is correct! The random number was:" $random
